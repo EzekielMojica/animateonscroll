@@ -1,0 +1,122 @@
+[data-animation]{
+    overflow-x: hidden;
+}
+/* FADE */
+[data-animation^=fade]{
+    transition-duration: 1s;
+    opacity: 0;
+    transition-property: opacity,transform;
+}
+[data-animation^=fade].animate{
+    opacity: 1;
+    transform: translateZ(0);
+}
+[data-animation=fade-up]{
+    transform: translate(0,100px);
+}
+[data-animation=fade-down]{
+    transform: translate(0,-100px);
+}
+[data-animation=fade-left]{
+    transform: translate(100px,0);
+}
+[data-animation=fade-right]{
+    transform: translate(-100px,0);
+}
+[data-animation=fade-down-left]{
+    transform: translate(100px,-100px);
+}
+[data-animation=fade-down-right]{
+    transform: translate(-100px,-100px);
+}
+[data-animation=fade-up-left]{
+    transform: translate(100px,100px);
+}
+[data-animation=fade-up-right]{
+    transform: translate(-100px,100px);
+}
+/* ZOOM */
+[data-animation^=zoom]{
+    transition-duration: 1s;
+    opacity: 0;
+    transition-property: opacity,transform;
+}
+[data-animation^=zoom].animate{
+    opacity: 1;
+    transform: translateZ(0);
+}
+[data-animation=zoom-in]{
+    transform: scale(0.6);
+}
+[data-animation=zoom-in-up]{
+    transform: translate(0,100px) scale(0.6);
+}
+[data-animation=zoom-in-down]{
+    transform: translate(0,-100px) scale(0.6);
+}
+[data-animation=zoom-in-left]{
+    transform: translate(100px,0) scale(0.6);
+}
+[data-animation=zoom-in-right]{
+    transform: translate(-100px,0) scale(0.6);
+}
+[data-animation=zoom-out]{
+    transform: scale(1.6);
+}
+[data-animation=zoom-out-up]{
+    transform: translate(0,100px) scale(1.6);
+}
+[data-animation=zoom-out-down]{
+    transform: translate(0,-100px) scale(1.6);
+}
+[data-animation=zoom-out-left]{
+    transform: translate(100px,0) scale(1.6);
+}
+[data-animation=zoom-out-right]{
+    transform: translate(-100px,0) scale(1.6);
+}
+/* WIPE */
+[data-animation^=wipe]{
+    transition-duration: 1s;
+    transition-property: transform;
+}
+[data-animation^=wipe].animate{
+    transform: scale(1,1);
+}
+[data-animation=wipe-up]{
+    transform-origin: bottom;
+    transform: scale(1,0);
+}
+[data-animation=wipe-down]{
+    transform-origin: top;
+    transform: scaleY(0);
+}
+[data-animation=wipe-left]{
+    transform-origin: right;
+    transform: scaleX(0);
+}
+[data-animation=wipe-right]{
+    transform-origin: left;
+    transform: scaleX(0);
+}
+/* MISC */
+[data-animation^=misc]{
+    transition-duration: 1s;
+    opacity: 0;
+    transition-property: opacity,transform;
+}
+[data-animation^=misc].animate{
+    opacity: 1;
+    transform: translateZ(0);
+}
+[data-animation=misc-expand]{
+    transform: scaleX(0.3);
+}
+[data-animation=misc-compress]{
+    transform: scaleX(1.9);
+}
+[data-animation=misc-spinner]{
+    transform: scale(0.3, 0.3) rotate(60deg);
+}
+
+
